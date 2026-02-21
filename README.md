@@ -73,8 +73,15 @@ This project helped practice:
 Frontend project created for learning and UI practice.
 
 ---
+<img width="1893" height="922" alt="Screenshot 2026-02-21 145838" src="https://github.com/user-attachments/assets/f754dce9-fa55-4fbe-b1ac-7e2f0f1068d4" />
+<img width="1900" height="918" alt="Screenshot 2026-02-21 145854" src="https://github.com/user-attachments/assets/3bb748d9-3844-4c90-8d86-f67566c35465" />
+<img width="1881" height="922" alt="Screenshot 2026-02-21 145908" src="https://github.com/user-attachments/assets/8d846716-7381-4609-8086-cdb836cf3c1f" />
+<img width="1900" height="919" alt="Screenshot 2026-02-21 145923" src="https://github.com/user-attachments/assets/02efdf37-d3cb-462e-a2ed-acf25958ae56" />
+<img width="1897" height="920" alt="Screenshot 2026-02-21 145939" src="https://github.com/user-attachments/assets/aef11796-e44c-4783-b6e2-02da2b4417c0" />
 
-⭐ If you like this project, give it a star!
-<img width="1897" height="920" alt="Screenshot 2026-02-21 145939" src="https://github.com/user-attachments/assets/9ce4c9fd-d3ff-43c0-b08e-7078de780cbf" />
+
+
+
+
 
 
