@@ -1,43 +1,408 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreshCart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+</head>
+<body>
+ <header class="header">
+    <nav class="navbar">
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+        <div class="logo">
+            <img src="assets/freshcart-logo.svg" alt="">
+        </div>
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        <div class="search-box">
+            <input type="text" placeholder="Search for products">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+        <button class="location">
+            <i class="fa-solid fa-location-dot"></i>
+            Location
+        </button>
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+        <div class="icons">
+            <div class="icon">
+                <i class="fa-regular fa-heart"></i>
+            </div>
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+            <div class="icon">
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+            <div class="icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </div>
+        </div>
+    </nav>
+     <div class="menu-bar">
+
+    <button class="departments">
+        All Departments
+    </button>
+
+    <ul class="menu-links">
+        <li>Home</li>
+        <li>Shop</li>
+        <li>Stores</li>
+        <li>Mega menu</li>
+        <li>Pages</li>
+        <li>Account</li>
+        <li>Dashboard</li>
+        <li>Docs</li>
+    </ul>
+
+</div>
+</header>
+<section class="hero">
+
+    <div class="hero-content">
+
+        <span class="badge">Free Shipping - orders over $100</span>
+
+        <h1>
+            Free Shipping on <br>
+            orders over <span>$100</span>
+        </h1>
+
+        <p>
+            Free Shipping to First-Time Customers Only, After
+            promotions and discounts are applied.
+        </p>
+
+        <button class="shop-btn">
+            Shop Now <i class="fa-solid fa-arrow-right"></i>
+        </button>
+
+    </div>
+
+</section>
+<section class="categories">
+
+    <h2>Featured Categories</h2>
+
+    <div class="category-grid">
+
+        <div class="card">
+            <img src="assets/card1.jpg">
+            <p>Cleaning Essentials</p>
+        </div>
+
+        <div class="card active">
+            <img src="assets/card2.jpg">
+            <p>Pet Care</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/card3.jpg">
+            <p>Dairy, Bread & Eggs</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/card4.jpg">
+            <p>Snack & Munchies</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/card5.jpg">
+            <p>Bakery & Biscuits</p>
+        </div>
+
+        <div class="card">
+            <img src="assets/card6.jpg">
+            <p>Instant Food</p>
+        </div>
+
+    </div>
+   <div class="discount">
+
+    <div class="box">
+        <div class="content">
+            <h2>Fruits & Vegetables</h2>
+            <p>Get up to 30% Off</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+
+    <div class="box box2">
+        <div class="content">
+            <h2>Freshly Baked Buns</h2>
+            <p>Get up to 25% Off</p>
+            <button>Shop Now</button>
+        </div>
+    </div>
+
+</div>
+
+</section>
+<section class="popular">
+    <h2>Popular Products</h2><br><br>
+    <div class="popular-grid">
+        <div class="item">
+            <img src="assets/item1.jpg" alt="item1">
+             <span class="Badge">Sale</span>
+            <p>Snacks & Munchies</p>
+            <h6>Haldiram's Sev Bhujia</h6>
+             <p class="rating">⭐⭐⭐⭐</p>
+           <div class="price">$5 <strike>$8</strike></div>
+            <button>+ Add</button>
+        </div>
+
+        
+        <div class="item">
+            <img src="assets/item2.jpg" alt="item1">
+             <span class="Badge-green">14%</span>
+            <p>Bakery & Biscuits</p>
+            <h6>NutriChoice Digestive</h6>
+             <p class="rating">⭐⭐⭐⭐</p>
+            <div class="price">$25</div>
+            <button>+ Add</button>
+        </div>
+
+        
+        <div class="item">
+            <img src="assets/item3.jpg" alt="item1">
+             <span class="Badge-green">20%</span>
+            <p>SBakery & Biscuits</p>
+            <h6> 5 Star Chocolate</h6>
+             <p class="rating">⭐⭐⭐⭐⭐</p>
+            <div class="price">$32 <strike>$35</strike></div>
+            <button>+ Add</button>
+        </div>
+
+        
+        <div class="item">
+            <img src="assets/item4.jpg" alt="item1">
+            <p>Snacks & Munchies</p>
+            <span class="Badge">Hot</span>
+            <h6>Onion Flavour Potato</h6>
+             <p class="rating">⭐⭐⭐</p>
+            <div class="price">$3 <strike>$5</strike></div>
+            <button>+ Add</button>
+        </div>
+
+       
+        <div class="item">
+            <img src="assets/item5.jpg" alt="item1">
+            <p>Instant Food</p>
+            <h6>Salted Instant Popcorn</h6>
+             <p class="rating">⭐⭐⭐⭐⭐</p>
+            <div class="price">$13 <strike>$18</strike></div>
+            <button>+ Add</button>
+        </div>
+
+       
+        <div class="item">
+            <img src="assets/item6.jpg" alt="item1">
+             <span class="Badge-green">18%</span>
+            <p>Dairy, Bread & Eggs</p>
+            <h6>Blueberry Greek Yogurt</h6>
+            <p class="rating">⭐⭐⭐⭐⭐</p>
+            <div class="price">$18 <strike>$24</strike></div>
+            <button>+ Add</button>
+        </div>
+
+       
+        <div class="item">
+            <img src="assets/item7.jpg" alt="item1">
+            <p>Dairy, Bread & Eggs</p>
+            <h6>Britannia Cheese Slices</h6>
+             <p class="rating">⭐⭐⭐⭐</p>
+            <div class="price">$24</div>
+            <button>+ Add</button>
+        </div>
+
+        
+        <div class="item">
+            <img src="assets/item8.jpg" alt="item1">
+            <p>Instant Food</p>
+                        <span class="Badge">Hot</span>
+
+            <h6>Kellogg's Cereals</h6>
+             <p class="rating">⭐⭐⭐⭐⭐</p>
+            <div class="price">$32 <strike>$35</strike></div>
+            <button>+ Add</button>
+        </div>
+
+        
+        <div class="item">
+            <img src="assets/item9.jpg" alt="item1">
+            <p>Snacks & Munchies</p>
+            <h6>Slurrp Millet Chocolate</h6>
+             <p class="rating">⭐⭐⭐⭐⭐</p>
+            <div class="price">$3 <strike>$5</strike></div>
+            <button>+ Add</button>
+        </div>
+
+         <div class="item">
+            <img src="assets/item10.jpg" alt="item1">
+            <span class="Badge">Hot</span>
+            <p>Dairy, Bread & Eggs</p>
+            <h6>Amul Butter - 500 g</h6>
+            <p class="rating">⭐⭐⭐⭐</p>
+            <div class="price">$13 <strike>$18</strike></div>
+            <button>+ Add</button>
+        </div>
+    </div>
+</section>
+
+<section class="daily-deals">
+    <h2>Daily Best Sells</h2>
+
+    <div class="deal-grid">
+
+    <div class="coffee-banner">
+    <div class="banner-content">
+        <h1>100% Organic Coffee Beans.</h1>
+        <p>Get the best deal before close.</p>
+        <button>Shop Now →</button>
+    </div>
+</div>
+        <div class="deal-card">
+            <img src="assets/coffee-card.jpg">
+            <span>Tea, Coffee & Drinks</span>
+            <h4>Roast Ground Coffee</h4>
+            <div class="deal-price">$13 <strike>$18</strike></div>
+            <button>+ Add to cart</button>
+        </div>
+
+        <div class="deal-card">
+            <img src="assets/product-img-12.jpg">
+            <span>Fruits & Vegetables</span>
+            <h4>Crushed Tomatoes</h4>
+            <div class="deal-price">$13 <strike>$18</strike></div>
+            <button>+ Add to cart</button>
+        </div>
+
+        <div class="deal-card">
+            <img src="assets/pineapple.jpg">
+            <span>Fruits & Vegetables</span>
+            <h4>Golden Pineapple</h4>
+            <div class="deal-price">$13 <strike>$18</strike></div>
+            <button>+ Add to cart</button>
+        </div>
+
+    </div>
+</section>
+<br><br>
+<section class="detail">
+    <div class="boxes">
+      <h1><i class=" iconn fa-regular fa-clock"></i></h1>
+      <h2>10 minute grocery now</h2>
+      <p>Get your order delivered to your doorstep at <br> the earliest from FreshCart pickup stores <br> near you.</p>
+    </div>
+
+    <div class="boxes">
+        <i class="iconn fa-solid fa-gift"></i>
+        <h2>Best Prices & Offers</h2>
+        <p>Cheaper prices than your local supermarket, <br> great cashback offers to top it off. Get best <br> pricess & offers.</p>
+    </div>
+
+        <div class="boxes">
+     <i class=" iconn fa-solid fa-box"></i>
+        <h2>Wide Assortment</h2>
+        <p>Choose from 5000+ products across food, <br> personal care, household, bakery, veg and <br> non-veg & other categories.</p>
+    </div>
+
+        <div class="boxes">
+        <i class=" iconn fa-solid fa-arrows-rotate"></i>
+        <h2>Easy Returns</h2>
+        <p>Not satisfied with a product? Return it at the <br> doorstep & get a refund within hours. No <br> questions asked policy .</p>
+    </div>
+
+</section>
+<br><br><br><br>
+<footer class="site-footer">
+
+  <div class="wrap">
+
+    <div class="links-area">
+
+      <div class="block">
+        <h3>Categories</h3>
+        <ul>
+          <li>Vegetables & Fruits</li>
+          <li>Breakfast & instant food</li>
+          <li>Bakery & Biscuits</li>
+          <li>Atta, rice & dal</li>
+          <li>Personal care</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Dairy & Drinks</h3>
+        <ul>
+          <li>Milk & eggs</li>
+          <li>Cold drinks</li>
+          <li>Tea & coffee</li>
+          <li>Masala & oil</li>
+          <li>Pet care</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Company</h3>
+        <ul>
+          <li>About</li>
+          <li>Blog</li>
+          <li>Help Center</li>
+          <li>Careers</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Support</h3>
+        <ul>
+          <li>Payments</li>
+          <li>Shipping</li>
+          <li>Returns</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+
+      <div class="block">
+        <h3>Programs</h3>
+        <ul>
+          <li>Gift Cards</li>
+          <li>Promos</li>
+          <li>Ads</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="extra">
+      <div class="pay">
+        <p>Payment Partners</p>
+        <i class="fa-brands fa-cc-visa"></i>
+        <i class="fa-brands fa-cc-mastercard"></i>
+        <i class="fa-brands fa-cc-paypal"></i>
+      </div>
+
+      <div class="download">
+        <p>Get the app</p>
+        <button>App Store</button>
+        <button class="green">Google Play</button>
+      </div>
+    </div>
+
+    <div class="bottom">
+      <p>© 2026 FreshCart</p>
+
+      <div class="social">
+        <i class="fa-brands fa-facebook-f"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-instagram"></i>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+</body>
+</html>
